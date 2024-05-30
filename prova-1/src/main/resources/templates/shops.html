@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop List</title>
+</head>
+<body>
+    <h1>Shop List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="shop : ${shops}">              
+                <!-- per ogni "shop" di "shops", dammi questi campi sotto -->
+                <td th:text="${shop.id}"></td>
+                <td th:text="${shop.name}"></td>
+                <td th:text="${shop.address}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
